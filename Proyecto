@@ -1,0 +1,77 @@
+print("Teclea 1 para convertir de Azimut a Rumbo \n")
+print("Teclea 2 para convertir de Rumbo a Azimut \n")
+
+num = float(input("Respuesta: "))
+if num ==1:
+    Az = float(input("Teclea el valor Azimut: "))
+    if Az >= 0 and Az <= 90:
+        print("Cuadrante 1 0-90°: N-E")
+    else:
+            if Az > 90 and Az <= 180:
+                res = 180-Az
+                if res <= 180 and res > 90:
+                    print("Cuadrante 2 90°-180°: S-E")
+                else:
+                        if res <= 90 and res > 0:
+                            print("Cuadrante 1 0-90°: N-E")
+            if Az > 180 and Az <= 270:
+                res = Az-180
+                if res <= 270 and res > 180:
+                    print("Cuadrante 3 180° - 270°: S-W")
+                else:
+                    if res <= 180 and res > 90:
+                        print("Cuadrante 2 90°-180°: S-E")
+                    else:
+                        if res <=90 and res > 0:
+                            print("Cuadrante 1 0-90°: N-E")
+                        
+            if Az > 270 and Az <= 360:
+                res = 360-Az
+                if res <= 360 and res > 270:
+                    print("Cuadrante 4 270°- 360°: N-W")
+                else:
+                    if res <= 270 and res > 180:
+                        print("Cuadrante 3 180° - 270°: S-W")
+                    else:
+                        if res <= 180 and res > 90:
+                         print("Cuadrante 2 90°-180°: S-E")
+                        else:
+                            if res <=90 and res > 0:
+                             print("Cuadrante 1 0-90°: N-E")
+else:
+    if num ==2:
+      Az = float(input("Teclea el valor Rumbo: "))
+    if Az >= 0 and Az <= 90:
+        print("Az1: " + str(Az))
+    else:
+            if Az > 90 and Az <= 180:
+                res = 180-Az
+                if res <= 180 and res > 90:
+                    print("Az2: " + str(res))
+                else:
+                        if res <= 90 and res > 0:
+                            print("Az1: " + str(res))
+            if Az > 180 and Az <= 270:
+                res =180+Az
+                if res <= 270 and res > 180:
+                    print("Az3: " + str(res))
+                else:
+                    if res <= 180 and res > 90:
+                        print("Az2: " + str(res))
+                    else:
+                        if res <=90 and res > 0:
+                            print("Az1: " + str(res))
+                        
+            if Az > 270 and Az <= 360:
+                res = 360-Az
+                if res <= 360 and res > 270:
+                    print("Az4: " + str(res))
+                else:
+                    if res <= 270 and res > 180:
+                        print("Az3: " + str(res))
+                    else:
+                        if res <= 180 and res > 90:
+                         print("Az2: " + str(res))
+                        else:
+                            if res <=90 and res > 0:
+                             print("Az1: " + str(res))
